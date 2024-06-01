@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         immersive: true,
                         isSafeArea: true,
                         urlBuilder: (_) {
-                          return Future.value("https://www.baidu.com");
+                          return Future.value("https://www.ttv0.com");
                         });
                   },
                 ));
