@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(
               child: Text('打开网页'),
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     return FWebViewPage(
                         showNavBarItem: false,
                         immersive: true,
-                        isSafeArea: false,
+                        isSafeArea: true,
                         urlBuilder: (_) {
                           return Future.value("https://www.baidu.com");
                         });

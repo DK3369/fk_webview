@@ -137,7 +137,7 @@ class _FKWebViewState extends State<FKWebView>
                     // contextMenu: contextMenu,
                     /// 加载链接
                     initialUrlRequest: widget.initialUrl != null
-                        ? URLRequest(url: Uri.parse(widget.initialUrl!), headers: _fkWebViewConfig.initialHeaders)
+                        ? URLRequest(url: WebUri(widget.initialUrl!), headers: _fkWebViewConfig.initialHeaders)
                         : null,
 
                     /// 加载html代码
@@ -314,7 +314,7 @@ class _FKWebViewState extends State<FKWebView>
                 valueListenable: _immersive,
                 builder: (BuildContext context, bool immersive, Widget? child) {
                   final appBar = AppBar(
-                      brightness: Brightness.light,
+                      // brightness: Brightness.light,
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.black,
                       elevation: 0,
@@ -407,7 +407,7 @@ class _FKWebViewState extends State<FKWebView>
                                   return SizedBox(width: 32);
                                 },
                               )
-                            ]);
+                            ], systemOverlayStyle: SystemUiOverlayStyle.dark);
                   if (immersive) {
                     return Listener(
                       behavior: HitTestBehavior.translucent,
